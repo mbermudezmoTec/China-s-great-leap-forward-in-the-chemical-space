@@ -43,7 +43,7 @@ BEGIN{
     actinides=""
     if(match($2,"(Ac|Th|Pa|U|Np|Pu|Am|Cm|Bk|Cf|Es|Fm|Md|No|Lr)")){
 	actinides=$2}
-    print $1 "\t" mpy "\t" $2 "\t" organic "\t" inOrganic "\t" platinumMe "\t" alcalines "\t" nobles "\t" raras "\t" actinides
+    print $1 "\t" mpy "\t" $2 "\t" organic "\t" raras
 }
 
 
