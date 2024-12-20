@@ -1,4 +1,5 @@
 #! /usr/bin/awk -f
+#Script to assign the weighted contribution of each country to the chemical space
 
 BEGIN{
     FS=OFS="\t"
