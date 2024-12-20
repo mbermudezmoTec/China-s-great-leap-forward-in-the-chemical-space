@@ -1,6 +1,6 @@
 #! /bin/awk -f
 
-### This script select organometalic substaces with the salt criteria. Uses as input organic.tsv from the first classification given by 1_classification_SUBS.awk
+### This script selects organometalic substances disregarding salts. It uses as input organic.tsv from the first classification given by 1_classification_SUBS.awk
 
 BEGIN{
     FS="\t"; 
@@ -19,4 +19,3 @@ BEGIN{
 	    print $1"\t"$2"\t"$3}
     }
 }
-
