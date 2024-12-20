@@ -1,6 +1,6 @@
 #! /bin/awk -f
 
-### This script classifies substances into: 1.Organic, substances with C. 2. Organometallic, substances with C, Fe Co, Ni, Ru, Rh, Pd, Pt. 3. rare earths. 
+### This script classifies substances into: 1.Organic, substances with C. 2. rare earths. 
 function min(arr){
     if(arr[1]!=""){
 	m=arr[1]
@@ -15,7 +15,7 @@ function min(arr){
 BEGIN{
     FS="\t"; 
     OFS="\t";
-    print "RXN.ID" "\t" "year" "\t" "Substance" "\t" "Organic" "\t" "Inorganic" "\t" "platinumOrganic" "\t" "Alcaline" "\t" "Noble" "\t" "Rare" "\t" "Actinide"
+    print "RXN.ID" "\t" "year" "\t" "Substance" "\t" "Organic" "\t" "Rare"
 }
 
  NR>1{
