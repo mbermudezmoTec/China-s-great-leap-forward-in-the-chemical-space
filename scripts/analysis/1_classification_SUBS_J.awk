@@ -26,9 +26,9 @@ BEGIN{
     if(match($2,/C[A-Z0-9[:space:]]/) || $2=="C"){
 	organic=$2
     }
-    raras=""
+    rare=""
     if(match($2,"(Sc|Y|La|Ce|Pr|Nd|Pm|Sm|Eu|Gd|Tb|Dy|Ho|Er|Tm|Yb|Lu)")){
-	raras=$2}
+	rare=$2}
     print $1 "\t" mpy "\t" $2 "\t" organic "\t" rare
 }
 
