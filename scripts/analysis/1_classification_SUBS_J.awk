@@ -1,8 +1,6 @@
 #! /bin/awk -f
 
-### This script finds the first date of apparition of every substances reported in the substaces context.
-### Also classifies the substances by the following groups: 1.Organic, substances with C. 2. Organometallic, substances with C, Fe Co, Ni, Ru, Rh, Pd, Pt. 3. Organic with alkali, Li, Na, K, Rb, Cs, Fr. 4. Noble gases. 5. rare earths. 
-# This information comes from  /usr/people/bermudez/PREP/P_SUB/scr_09_Aug_23/unique_all_subds.tsv
+### This script classifies substances into: 1.Organic, substances with C. 2. Organometallic, substances with C, Fe Co, Ni, Ru, Rh, Pd, Pt. 3. rare earths. 
 function min(arr){
     if(arr[1]!=""){
 	m=arr[1]
