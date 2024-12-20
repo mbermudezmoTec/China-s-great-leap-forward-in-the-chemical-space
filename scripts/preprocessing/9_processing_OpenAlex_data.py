@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
+#This script processes raw data dumped from OpenAlex and returns author names and their affiliations for authors of papers reporting substances in Reaxys.
 
 import json
 
-#with open('t1') as file:
 with open('out_last_hope_percet.txt') as file:
     for line in file:        
         if line!='\n':
