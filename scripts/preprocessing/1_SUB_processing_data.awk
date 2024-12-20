@@ -14,7 +14,7 @@ BEGIN {
 	pattern=gensub(/.*<\/(.*?)>.*/,"\\1","g",$0)#Detects fields
 	if(match(a,pattern)){
     		if(pattern==rxdets[1]){
-		    rgx=".*<"pattern".*>(.+)</"pattern">"#If the field belongs to the list, it value it is storaged
+		    rgx=".*<"pattern".*>(.+)</"pattern">"#If the field belongs to the list, it is stored
 		    data[pattern]=data[pattern] ":" gensub(rgx,"\\1","g",$0)
 	    }
 		if(pattern!=rxdets[1]){
