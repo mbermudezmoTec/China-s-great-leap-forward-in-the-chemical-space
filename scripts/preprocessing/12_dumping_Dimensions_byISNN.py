@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
+#Script to dump data from Dimensions.  Searches are made by authors, titles, pages, years and ISSN.
 
 import dimcli
 import pandas as pd
 import json
 
 # you can pass explicitly your login details as arguments
-dimcli.login(key="327B256FE7C7435994F18BCC209C8BD4", endpoint="https://app.dimensions.ai")
+dimcli.login(key=" ", endpoint="https://app.dimensions.ai")
 
 dsl = dimcli.Dsl()
 
