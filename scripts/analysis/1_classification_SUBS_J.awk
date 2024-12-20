@@ -26,23 +26,10 @@ BEGIN{
     inOrganic=""
     if(match($2,/C[A-Z0-9[:space:]]/) || $2=="C"){
 	organic=$2
-    }else{
-	inOrganic=$2}
-    platinumMe=""
-    if(match($2,"(Fe|Ni|Ru|Rh|Pd|Pt|Co|Os|Ir)")){
-	platinumMe=$2}	    
-    alcalines=""
-    if(match($2,/Li|Na|K[^r]|Rb|Cs|Fr/)){
-	alcalines=$2}        
-    nobles=""
-    if(match($2,"(He|Ne|Ar|Kr|Xe|Rn)")){
-	nobles=$2}
+    }
     raras=""
     if(match($2,"(Sc|Y|La|Ce|Pr|Nd|Pm|Sm|Eu|Gd|Tb|Dy|Ho|Er|Tm|Yb|Lu)")){
 	raras=$2}
-    actinides=""
-    if(match($2,"(Ac|Th|Pa|U|Np|Pu|Am|Cm|Bk|Cf|Es|Fm|Md|No|Lr)")){
-	actinides=$2}
     print $1 "\t" mpy "\t" $2 "\t" organic "\t" raras
 }
 
