@@ -1,4 +1,5 @@
 #! /usr/bin/awk -f
+#Script to count collaboration between and among countries
 
 BEGIN{
     OFS=FS="\t"
