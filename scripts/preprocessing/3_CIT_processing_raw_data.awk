@@ -1,7 +1,7 @@
 #!/usr/bin/awk -f
 
-# This script takes the information about cites, keywords and abstract from the raw data. It was modify by MBM on Aug 30 2023 and apply to the cit context download of Aug 15 2023.
-# Extract relevant data from raw XML files for citations, donwloaded from Reaxys,
+# This script takes the information about citations, keywords and abstract from the raw data.
+# It extracts relevant data from raw XML files for citations, donwloaded from Reaxys.
 
 BEGIN{
     OFS="\t"       
@@ -13,10 +13,6 @@ BEGIN{
 }
 
 {
-# if(match($0,/<citation index/)){
-# 	cit_num=0 # Citation detail number. For creating unique ID for each citation
-# 	}
-
     if(match($0,/<CNR.CNR.+>/)){
 	# Extract RX ID
 	citid=gensub(/.*<CNR.CNR.+>(.+)<\/CNR.CNR>/, "\\1","g",$0)
@@ -32,14 +28,13 @@ BEGIN{
 	field=citdets[i]
 	if(match($0,field)){
 	    rgx=".*"field"(.+)" 
-	    data[field]=data[field] ":" gensub(rgx, "\\1","g",$0)  # Concatenate with previous entries found for this reaction detail
+	    data[field]=data[field] ":" gensub(rgx, "\\1","g",$0)  
 	}
     }
 
 # Dump all the collected data into a single line
     if(match($0,/<\/citation>/)){
 	line=citid 
-	# Add reagents, catalysts, etc...
 	for(i in citdets){ 
 	    field=citdets[i]
 	    sub(":","",data[field]) # Remove first ":" 
