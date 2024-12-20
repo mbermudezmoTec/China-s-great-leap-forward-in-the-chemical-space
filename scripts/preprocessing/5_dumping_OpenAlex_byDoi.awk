@@ -1,4 +1,5 @@
 #!/bin/bash
+#Script to dump data from OpenAlex, searches are made by DOI
 
 for i in $(seq 1 20000);
 do echo $i 
