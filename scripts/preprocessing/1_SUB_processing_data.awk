@@ -24,7 +24,7 @@ BEGIN {
 
 	}
     }
-    if(match($0,"</substance>")){ # Needed to store information per substnace and not in a cumulative fashion
+    if(match($0,"</substance>")){ # Needed to store information per substance and not in a cumulative fashion
     	line=""
 	for(i in rxdets){
 		field=rxdets[i]
