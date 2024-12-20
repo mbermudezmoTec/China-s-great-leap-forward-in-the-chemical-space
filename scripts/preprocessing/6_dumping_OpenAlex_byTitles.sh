@@ -1,4 +1,5 @@
 #!/bin/bash
+#Script to dump data from OpenAlex, searches are made by publication titles
 
 for i in $(seq 1 80000);
 do 
