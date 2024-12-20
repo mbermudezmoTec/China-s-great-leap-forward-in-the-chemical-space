@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
+#Script to dump data from Dimensions, searches are made by DOI
 
 import dimcli
 import pandas as pd
 import json
 
 # you can pass explicitly your login details as arguments
-dimcli.login(key="327B256FE7C7435994F18BCC209C8BD4", endpoint="https://app.dimensions.ai")
+dimcli.login(key=" ", endpoint="https://app.dimensions.ai")
 
 dsl = dimcli.Dsl()
 
@@ -19,4 +20,3 @@ for i in col_one_list:
     res=dsl.query('search publications where \n' +doi1+' \n return publications[id+title+doi+year+authors+type+pages+journal+issue+volume]')
     with open('fileC2_1.txt', 'a') as file:
      file.write(json.dumps(res.data)+"\n") 
-#    print(res.data)
