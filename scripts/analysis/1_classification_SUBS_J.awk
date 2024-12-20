@@ -23,7 +23,6 @@ BEGIN{
     mpy=min(py)
     gsub("<*.sub>","",$2)
     organic=""
-    inOrganic=""
     if(match($2,/C[A-Z0-9[:space:]]/) || $2=="C"){
 	organic=$2
     }
