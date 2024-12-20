@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
+#Script to prepare search prompts.  It search in OpenAlex by ISSN.
 
 import pandas as pd
-
-# you can pass explicitly your login details as arguments
 
 def generate_sentences(file_path):
     sentences = []
@@ -15,7 +14,6 @@ def generate_sentences(file_path):
             # Extract the relevant data
             year = columns[0]
             id_ = columns[1]
-#            name = columns[2]
             pages = columns[2]
             issn = columns[3]
             # Create the sentence based on the extracted data
