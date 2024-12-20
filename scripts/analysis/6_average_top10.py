@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# no se hizo, las organicas ya estan analizadas asi
+# Script to retrieve the top-10 countries and collaborations that contribute to the chemical space
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -29,10 +29,8 @@ new_df = pd.DataFrame([])
 
 # getting the percentage by year
 num=len(de.columns)-2
-#print(de)
 
 for i in range(0,num):
-    #print(i)
     new_df[de.columns[i]] = de[de.columns[i]]/de['total']*100
 
 # list1 contains the weight contribution of each composition by year
@@ -59,5 +57,3 @@ for col in list3.columns:
 result['mean'] = result.mean(axis=1)
 print(result.sort_values(by=['mean']).head(50))
 result.sort_values(by=['mean']).head(5000).to_csv('t4',sep='\t')
-
-
