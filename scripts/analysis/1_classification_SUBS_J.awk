@@ -29,7 +29,7 @@ BEGIN{
     raras=""
     if(match($2,"(Sc|Y|La|Ce|Pr|Nd|Pm|Sm|Eu|Gd|Tb|Dy|Ho|Er|Tm|Yb|Lu)")){
 	raras=$2}
-    print $1 "\t" mpy "\t" $2 "\t" organic "\t" raras
+    print $1 "\t" mpy "\t" $2 "\t" organic "\t" rare
 }
 
 
